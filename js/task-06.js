@@ -3,7 +3,7 @@ const validationInput = document.querySelector('#validation-input');
 const inputLength = validationInput.getAttribute('data-length');
 
 const blurInput = validationInput.addEventListener("blur", (event) => {
-    if (event.currentTarget.value.length == inputLength) {
+    if (event.currentTarget.value.length === Number(inputLength)) {
         validationInput.classList.add('valid');
         validationInput.classList.remove('invalid');
         console.log('valid')
